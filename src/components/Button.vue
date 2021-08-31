@@ -19,7 +19,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .btn {
   display: inline-block;
   border: 1px solid transparent;
