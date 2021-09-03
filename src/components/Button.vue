@@ -1,5 +1,5 @@
 <template>
-  <button :style="{ background: color }" class="btn" v-on:click="onClick()">
+  <button :style="{ background: color }" class="btn" @click="onClick()">
     {{ text }}
   </button>
 </template>
@@ -13,7 +13,7 @@ export default {
   },
   methods: {
     onClick() {
-      console.log("click");
+      this.$emit("toggle-add-task");
     },
   },
 };
@@ -25,7 +25,7 @@ export default {
   border: 1px solid transparent;
   outline: none;
   background-color: #000;
-  color: #666;
+  color: #fff;
   font-size: 17px;
   font-weight: bold;
   padding: 5px 10px;
@@ -36,7 +36,7 @@ export default {
 }
 
 .btn:hover {
-  color: #fff;
+  color: #222;
 }
 .btn:active {
   transform: scale(0.7);
